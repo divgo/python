@@ -102,7 +102,7 @@ class EventHandler(pyinotify.ProcessEvent):
             imageio.mimsave(self.motionStart + ".gif", FRAMEDATA)
         except:
             print("Exception creating animated gif")
-# 031473
+
     def uploadToAWS(self, filePath, fileName):
         print("Uploading [" + filePath + "] to AWS")
         with open(filePath, 'rb') as data:
