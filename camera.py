@@ -118,36 +118,7 @@ class EventHandler(pyinotify.ProcessEvent):
     def process_IN_CREATE(self, event):
         print("Creating: " + event.pathname)
         filePath = str(event.pathname)
-        #fileName = filePath[filePath.rfind("/")+1:]
-        #print(fileName)
-        #self.fileCount += 1 # Increment File Count
-        #time.sleep(0.2)     # Sleep to allow time to write image
-        #fileHash, fileName = self.processFile(event.pathname)
-        #image = Image.open(event.pathname)
-        #fileHash = str(imagehash.dhash(image))
 
-
-#        if self.fileCount == 1:
-#            print("setting initial file hash: " + fileHash)
-#            os.environ["known_hash"] = fileHash
-#            self.sourceImage = image
-#            os.remove(filePath)
-#        elif self.fileCount < 10:
-#            if fileHash == known_hash:
-#                print("incrementing initial file hash")
-#                #self.fileCount += 1
-#            elif hamming <= 2:
-#                print("incrementing initial file hash")
-#                #self.fileCount += 1                
-#            else:
-#                print("to much movement to derive standard hash")
-#            os.remove(filePath)
-#        else:
-#            if fileHash == known_hash or hamming <=2:
-#                os.remove(filePath)
-#            else:
-#                self.uploadToAWS(filePath, fileName)
-        
         print("-" * 50)
 
 # Initialize the Watcher on the Directory
